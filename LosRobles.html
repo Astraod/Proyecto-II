@@ -1,99 +1,75 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-
+<html lang="es">
 <head>
-  <title>Los Robles</title>
-    <nav>
-        <ul class="navBar">
-            <li><a href=»#inicio»>Inicio</a></li>
-            <li><a href=»#nosotros»>Nosotros</a></li>
-            <li><a href=»#contacto»>Contacto</a></li>
-            <li><a href=»#blog»>Blog</a></li>
-            <li><a href=»#login»>Iniciar Sesión</a></li>
-        </ul>
-    </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Robles</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="title">
-        <h1>Los Robles</h1>
-        <p><p style="background-image: url('images/hero_section.png');"></p>
-    </div>
-    
-    <div class="mainPage">
-        <img src="images/los_robles_logo.png" alt="LosRoblesLogo">
-        <h2>Los Robles</h2>
-            <h3>Descubre el lugar donde sueños y realidad se encuentran.</h3>
-            <p>En Residencial Los Robles, cada detalle ha sido cuidadosamente planificado para ofrecer a</p>
-            <p>nuestros residentes una vida llena de confort, seguridad y exclusividad. Ubicado en el corazón de</p>
-            <p>una hermosa ciudad, nuestro complejo ofrece acceso inmeadiato a las mejores escuelas, centros</p>
-            <p>comerciales, y áreas de esparcimiento, asegurando una experiencia de vida sin igual.</p>
-    </div>
-  
-    <div class="amenities">
-        <figure>
-            <img src="images/pros_1.png" alt="seguridad" width="104" height="142">
-            <figcaption>Seguridad</figcaption>
-        </figure>
-        <figure>
-            <img src="images/pros_2.png" alt="conectivdadYUbicacion" width="104" height="142">
-            <figcaption>Conectividad y Ubicación</figcaption>
-        </figure>
-        <figure>
-            <img src="images/pros_3.png" alt="espaciosVerdes" width="104" height="142">
-            <figcaption>Espacios Verdes</figcaption>
-        </figure>      
-    </div>
 
-    <div class="contactInfo">
-        <p style="background-image: url('images/contact_background.png');"></p>
-        <h3>Encuentra tu Hogar Ideal</h3>
-            <p>Completa el formulario a continuación y uno</p>
-            <p>de nuestros asesores se pondra en contacto</p>
-            <p>contigo para programar una visita y mostrarte</p>
-            <p>todo lo que Residencial Los Robles tiene para</p>
-            <p>ofrecer. No pierdas la oportunidad de vivir en</p>
-            <p>el hogar de tus sueños.</p>      
-    </div>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar__container">
+            <img src="images/logo_robles_text.webp" alt="Los Robles Logo" class="navbar__logo">
+            <a href="#login" class="navbar__login">Iniciar Sesión</a>
+        </div>
+    </header>
 
-    <div class="contactForm">
-        <form action="/action_page.php">
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Correo:</label><br>
-            <input type="email" id="email" name="email">
-            <label for="tel">Teléfono:</label><br>
-            <input type="number" id="tel" name="tel">
-            <label for="message">Mensaje:</label><br>
-            <input type="text" id="message" name="message">
-            <input type="submit" value="Enviar">
-        </form>
+    <!-- Hero Section -->
+    <section class="hero">
+    </section>
+    <div class="hero__content">
+        <img src="images/los_robles_logo.webp" alt="Los Robles Logo" class="hero__logo">
+        <h1 class="hero__title">Los Robles</h1>
+        <p class="hero__description">En Residencial Los Robles, cada detalle ha sido cuidadosamente planificado para ofrecer a nuestros residentes una vida llena de confort, seguridad y exclusividad. Ubicado en el corazón de una hermosa ciudad, nuestro complejo ofrece acceso inmediato a las mejores escuelas, centros comerciales, y áreas de esparcimiento, asegurando una experiencia de vida sin igual.</p>
     </div>
+    <!-- Info Section -->
+    <section class="info">
+
+        
+        <div class="info__item">
+            <img src="images/pros_1.webp" alt="Seguridad 24/7" class="info__image">
+            <figcaption class="info__caption">Seguridad 24/7</figcaption>
+        </div>
+        <div class="info__item">
+            <img src="images/pros_2.webp" alt="Conectividad y Ubicación" class="info__image">
+            <figcaption class="info__caption">Conectividad y Ubicación</figcaption>
+        </div>
+        <div class="info__item">
+            <img src="images/pros_3.webp" alt="Espacios Verdes" class="info__image">
+            <figcaption class="info__caption">Espacios Verdes</figcaption>
+        </div>
+    </section>
+
+    <!-- Formulario Section -->
+    <section class="formulario">
+        <div class="formulario__container">
+            <div class="formulario__content">
+                <h3 class="formulario__title">Encuentra tu Hogar Ideal</h3>
+                <p class="formulario__text">Completa el formulario a continuación y uno de nuestros asesores se pondrá en contacto contigo para programar una visita y mostrarte todo lo que Residencial Los Robles tiene para ofrecer. No pierdas la oportunidad de vivir en el hogar de tus sueños.</p>
+            </div>
+            <form class="formulario__form" action="/action_page.php" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Escribe tu Nombre aquí" required>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu Correo aquí" required>
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="tel" name="tel" placeholder="Escribe tu Teléfono aquí" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Déjanos tu mensaje" required></textarea>
+                <button type="submit" class="formulario__button">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <img src="images/los_robles_logo.webp" alt="Los Robles Logo" class="footer__logo">
+            <p>@Los Robles - Derechos Reservados</p>
+        </div>
+    </footer>
+
 </body>
-<footer class="contactFooter">
-    <h4>Los Robles</h4>
-    <p><a href="mailto:hola@losrobles.com">hola@losrobles.com</a></p>
-    <p>55 3333 3333</p>
-    <p>calle numero 20 de la colonia, México</p>
-</footer>
-<footer class="navBar2">
-    <ul>
-        <li><a href=»#inicio»>Inicio</a></li>
-        <li><a href=»#nosotros»>Nosotros</a></li>
-        <li><a href=»#contacto»>Contacto</a></li>
-    </ul>
-</footer>
-<footer class="newsletter">
-    <p>Newsletter</p>
-    <form action="/action_page.php">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email">
-        <input type="submit" value="Suscribirse">
-    </form>
-</footer>
-<footer class="legalCopyright">
-    <p>@LosRobles - DerechosReservados</p>
-</footer>
-
 </html>
