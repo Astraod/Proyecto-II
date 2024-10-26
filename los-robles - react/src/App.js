@@ -1,5 +1,6 @@
 // Importaciones y configuración inicial de React
 import React from 'react';
+import Login from './Login';
 import './App.css';
 
 // Navbar Component
@@ -8,12 +9,13 @@ function Navbar() {
     <header className="navbar">
       <div className="navbar__container">
         <img src={process.env.PUBLIC_URL + '/images/logo_robles_text.webp'} alt="Los Robles Logo" className="navbar__logo" />
-        <a href="#login" className="navbar__login">Iniciar Sesión</a>
+        <Link to="/login" className="navbar__login">Iniciar Sesión</Login> {/* Cambia a <Link> para manejar la navegación */}
       </div>
     </header>
   );
 }
 
+export default Navbar;
 // Hero Section Component
 function Hero() {
   return (
