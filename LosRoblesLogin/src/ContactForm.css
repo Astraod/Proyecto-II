@@ -1,0 +1,77 @@
+.contact-section {
+    display: flex;
+    align-items: center;
+    padding: 0 40px 20px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-background {
+    flex: 1;
+    position: relative;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85; /* Añadir algo de opacidad para dar más enfoque al formulario */
+    z-index: -1;
+  }
+  
+  .contact-form-container {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+  }
+  
+  .contact-form-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form-container p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form .form-group textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #7ed957;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #5cbf40;
+  }
+  
