@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Corporativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: white;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-color: #ffffff;
+        }
+
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .logo {
+            width: 250px;
+            height: 250px;
+        }
+
+        .title {
+            color: #1A4B84;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #f0f0f0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: red;
+            padding: 0.5rem 1rem;
+            border: 1px solid #1A4B84;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            background-color: #1A4B84;
+            color: white;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -50px;
+            background-color: white;
+            border: 1px solid #1A4B84;
+            border-radius: 5px;
+            min-width: 100%;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .submenu.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .submenu a {
+            color: #1A4B84;
+            border: none;
+            padding: 0.5rem 1rem;
+            text-align: center;
+        }
+
+        .submenu a:hover {
+            background-color: #f0f0f0;
+            color: red;
+        }
+
+        .enlaces {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #e0e0e0;
+        }
+
+        .enlaces a {
+            text-decoration: none;
+            color: white;
+            background-color: #1A4B84;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .enlaces a:hover {
+            background-color: #14365e;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #1A4B84;
+            color: white;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Logo_UDEG_Virtual.svg/1200px-Logo_UDEG_Virtual.svg.png" alt="">
+        </div>
+        <h1 class="title">Proyecto II</h1>
+        <h2>Producto integrador. El final del proceso</h2>
+    </div>
+
+    <div class="nav">
+        <div class="nav-item">
+            <a onclick="toggleSubmenu('unidad1')">Unidad 1</a>
+            <div id="unidad1" class="submenu">
+                <a href="https://docs.google.com/document/d/1anfeh4HBFTlk0tq2HoHXrRcIrTZAAdrc/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank" >Actividad 2. El product backlog</a>
+                <a href="https://docs.google.com/document/d/1uO95Voc_v9M9e61Zl3ngtVZUBJux9_pF/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad integradora. Sprint, el corazón de SCRUM</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a onclick="toggleSubmenu('unidad2')">Unidad 2</a>
+            <div id="unidad2" class="submenu">
+                <a href="https://docs.google.com/document/d/185lCGqeECT_EOmOZeQm4s8NBmPbqjXo9/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank" >Actividad 1. Aplicación de SCRUM</a>
+                <a href="https://docs.google.com/document/d/1I_RAHtioEH6ntqQd_rR4zyaMrdKzPJlP/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad 2. El sprint Shedule</a>
+                <a href="https://docs.google.com/document/d/1QoKHwQSJcLqgqBUBql9ZtbH-woyq6dNj/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad integradora 2. El backlog y el spring Schedule del proyecto</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a onclick="toggleSubmenu('unidad3')">Unidad 3</a>
+            <div id="unidad3" class="submenu">
+                <a href="https://docs.google.com/document/d/1S137gLYfLPyTNc8512JCWz56M4bkIB1a/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad 1. Primera fase de desarrollo</a>
+                <a href="https://docs.google.com/document/d/1JFnGpPFxqYu9Yk0vX4EXz-92RDQA72uy/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad 2. Segunda fase de desarrollo</a>
+                <a href="https://docs.google.com/document/d/1xRLI4hel5TUYxkCOfYeGSjdBOxAJmC4t/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad 3. Tercera fase de desarrollo</a>
+                <a href="https://docs.google.com/document/d/1fG7tsqVWVKHQKLhUPgsNhNU7YyMkxeUh/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad integradora. Producto final U3</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a onclick="toggleSubmenu('unidad4')">Unidad 4</a>
+            <div id="unidad4" class="submenu">
+                <a href="https://docs.google.com/document/d/1_FUtWin8OimG017c7Sr_40Z9IIh61C2U/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad 1. Reunión de revisión inicial</a>
+                <a href="https://docs.google.com/document/d/1dnmwYAvYh4py2o6x1IS5rO4yg66VoFr_/edit?usp=drive_link&ouid=112107181718772325641&rtpof=true&sd=true" target="_blank">Actividad 2. Reunión para revisión de modificaciones</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="enlaces">
+        <a href="https://github.com/Astraod/Proyecto-II" target="_blank">GitHub</a>
+        <a href="https://drive.google.com/file/d/1J-hhBU3z4xXQAeizUzqyKXcOvOO7sbd5/view?usp=drive_link" target="_blank">Carpeta de Proyecto</a>
+        <a href="https://rivego0117.atlassian.net/jira/software/projects/LR/boards/2/backlog?selectedIssue=LR-18&atlOrigin=eyJpIjoiZjU5ZTFmYmQ5YjAwNGNkODlkODY1NjZlNjEzMzc4OGQiLCJwIjoiaiJ9" target="_blank">Jira</a>
+    </div>
+
+    <div class="enlaces">
+        <a href="#">Reporte de modificaciones</a>
+    </div>
+
+    <div class="footer">
+        <div>Esmeralda Orozco  | Rigoberto Velasquez  |  Victor Gonzalez</div>
+        <div>Equipo 1 | IH734_2024B</div>
+    </div>
+
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            const isActive = submenu.classList.contains('active');
+            
+
+            document.querySelectorAll('.submenu').forEach(el => {
+                el.classList.remove('active');
+            });
+
+
+            if (!isActive) {
+                submenu.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
