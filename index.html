@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Corporativa</title>
+    <title>El final del proceso</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -130,6 +131,37 @@
             color: white;
             margin-top: auto;
         }
+
+
+        @media screen and (max-width: 700px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                
+            }
+
+            .nav-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .submenu {
+                position: static;
+                width: 100%;
+                max-width: 380px;
+                margin-top: 0.5rem;
+                left: 0;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -176,13 +208,13 @@
     </div>
 
     <div class="enlaces">
-        <a href="https://github.com/Astraod/Proyecto-II" target="_blank">GitHub</a>
-        <a href="https://drive.google.com/file/d/1J-hhBU3z4xXQAeizUzqyKXcOvOO7sbd5/view?usp=drive_link" target="_blank">Carpeta de Proyecto</a>
-        <a href="https://rivego0117.atlassian.net/jira/software/projects/LR/boards/2/backlog?selectedIssue=LR-18&atlOrigin=eyJpIjoiZjU5ZTFmYmQ5YjAwNGNkODlkODY1NjZlNjEzMzc4OGQiLCJwIjoiaiJ9" target="_blank">Jira</a>
+        <a href="https://github.com/Astraod/Proyecto-II" target="_blank"> <i class="fab fa-github"></i> GitHub</a>
+        <a href="https://drive.google.com/file/d/1J-hhBU3z4xXQAeizUzqyKXcOvOO7sbd5/view?usp=drive_link" target="_blank"> <i class="fas fa-folder"></i> Carpeta de Proyecto</a>
+        <a href="https://rivego0117.atlassian.net/jira/software/projects/LR/boards/2/backlog?selectedIssue=LR-18&atlOrigin=eyJpIjoiZjU5ZTFmYmQ5YjAwNGNkODlkODY1NjZlNjEzMzc4OGQiLCJwIjoiaiJ9" target="_blank"> <i class="fab fa-jira"></i> Jira</a>
     </div>
 
     <div class="enlaces">
-        <a href="#">Reporte de modificaciones</a>
+        <a href="https://drive.google.com/file/d/1dHAWDRoO7Kp8kR8JnB7ir80Vu6EVNV2l/view?usp=drive_link" target="_blank"> <i class="fa fa-file-pdf"></i> Reporte de modificaciones</a>
     </div>
 
     <div class="footer">
